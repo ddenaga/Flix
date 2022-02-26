@@ -1,4 +1,4 @@
-package com.github.ddenaga.flix
+package com.github.ddenaga.flix.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -8,6 +8,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.github.ddenaga.flix.models.Movie
+import com.github.ddenaga.flix.R
 
 class MovieAdapter(private val context: Context, private val movies: List<Movie>) : RecyclerView.Adapter<MovieAdapter.ViewHolder>() {
 

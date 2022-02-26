@@ -1,4 +1,4 @@
-package com.github.ddenaga.flix
+package com.github.ddenaga.flix.models
 
 import org.json.JSONArray
 
