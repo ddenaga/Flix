@@ -7,15 +7,14 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.codepath.asynchttpclient.AsyncHttpClient
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler
+import com.github.ddenaga.flix.BuildConfig
 import com.github.ddenaga.flix.R
 import com.github.ddenaga.flix.adapters.MovieAdapter
 import com.github.ddenaga.flix.models.Movie
+import com.github.ddenaga.flix.network.MovieClient
 import okhttp3.Headers
 import org.json.JSONException
 
-// URL and API key to retrieve JSON data of movies "now playing" from the Movie DB.
-private const val API_KEY = "" // BuildConfig.API_KEY
-private const val NOW_PLAYING_URL = "https://api.themoviedb.org/3/movie/now_playing?api_key=$API_KEY"
 
 private const val TAG = "MainActivity"  // Logcat tag.
 private lateinit var rvMovies: RecyclerView
@@ -36,9 +35,9 @@ class MainActivity : AppCompatActivity() {
         rvMovies.adapter = movieAdapter
         rvMovies.layoutManager = LinearLayoutManager(this)
 
-        // Asynchronous HTTP client for making requests to the API.
-        val client = AsyncHttpClient()
-        client.get(NOW_PLAYING_URL, object: JsonHttpResponseHandler() {
+        // Asynchronous HTTP client for making requests to the Movie DB API.
+        val movieClient = MovieClient()
+        movieClient.getNowPlaying(object: JsonHttpResponseHandler() {
             override fun onFailure(statusCode: Int, headers: Headers?, response: String?, throwable: Throwable?) {
                 Log.e(TAG, "onFailure: $statusCode")
             }
