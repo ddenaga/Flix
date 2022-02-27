@@ -22,9 +22,7 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 
 ### App Walkthough GIF
 
-`TODO://` Add the URL to your animated app walkthough `gif` in the image tag below, `YOUR_GIF_URL_HERE`. Make sure the gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after after adding gif)
-
-<img src="YOUR_GIF_URL_HERE" width=250><br>
+<img src='demo_2.gif' width=250 title='Video Walkthrough' alt='Video Walkthrough' /><br>
 
 ### Notes
 
@@ -53,7 +51,7 @@ Describe any challenges encountered while building the app.
 - [ ] (2pts) For popular movies (i.e. a movie voted for more than 5 stars), the full backdrop image is displayed. Otherwise, a poster image, the movie title, and overview is listed. Use Heterogenous RecyclerViews and use different ViewHolder layout files for popular movies and less popular ones.
 
 ### App Walkthough GIF
-<img src='demo.gif' width=250 title='Video Walkthrough' alt='Video Walkthrough' /><br>
+<img src='demo_1.gif' width=250 title='Video Walkthrough' alt='Video Walkthrough' /><br>
 
 ### Notes
 - When building, make sure to set an API key in `local.properties`. Read more about the Secrets Gradle Plugin [here](https://github.com/google/secrets-gradle-plugin).
