@@ -14,6 +14,7 @@ class DetailActivity : AppCompatActivity() {
 
     private lateinit var tvTitle: TextView
     private lateinit var tvOverview: TextView
+    private lateinit var tvPopularity: TextView
     private lateinit var rbVoteAverage: RatingBar
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,6 +23,7 @@ class DetailActivity : AppCompatActivity() {
 
         tvTitle = findViewById(R.id.tvTitle)
         tvOverview = findViewById(R.id.tvOverview)
+        tvPopularity = findViewById(R.id.tvPopularity)
         rbVoteAverage = findViewById(R.id.rbVoteAverage)
 
         val movie = intent.getParcelableExtra<Movie>(MOVIE_EXTRA) as Movie
@@ -29,6 +31,7 @@ class DetailActivity : AppCompatActivity() {
 
         tvTitle.text = movie.title
         tvOverview.text = movie.overview
-        // TODO: Get the rating of the movie
+        tvPopularity.text = getString(R.string.popularity, movie.popularity)
+        rbVoteAverage.rating = movie.voteAverage.toFloat()
     }
 }

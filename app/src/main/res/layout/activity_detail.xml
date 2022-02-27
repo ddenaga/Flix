@@ -19,7 +19,7 @@
     <RatingBar
         android:id="@+id/rbVoteAverage"
         style="@style/Widget.AppCompat.RatingBar.Indicator"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginStart="8dp"
@@ -28,6 +28,15 @@
         android:rating="4.5"
         android:numStars="10"
         android:stepSize="0.5"/>
+
+    <TextView
+        android:id="@+id/tvPopularity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/moviePopularity" />
 
     <TextView
         android:id="@+id/tvOverview"
