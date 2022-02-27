@@ -5,9 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.codepath.asynchttpclient.AsyncHttpClient
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler
-import com.github.ddenaga.flix.BuildConfig
 import com.github.ddenaga.flix.R
 import com.github.ddenaga.flix.adapters.MovieAdapter
 import com.github.ddenaga.flix.models.Movie
@@ -16,9 +14,8 @@ import okhttp3.Headers
 import org.json.JSONException
 
 
-private const val TAG = "MainActivity"  // Logcat tag.
 private lateinit var rvMovies: RecyclerView
-
+private const val TAG = "MainActivity"
 class MainActivity : AppCompatActivity() {
 
     private val movies = mutableListOf<Movie>()
