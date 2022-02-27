@@ -57,7 +57,7 @@ class DetailActivity : YouTubeBaseActivity() {
                     Log.w(TAG, "No movie trailers found")
                     return
                 }
-                val movieTrailerJson = results.getJSONObject(0)
+                val movieTrailerJson = results.getJSONObject(results.length() - 1)
                 val youtubeKey = movieTrailerJson.getString("key")
 
                 initializeYoutube(youtubeKey)
