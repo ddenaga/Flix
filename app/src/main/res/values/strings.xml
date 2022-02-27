@@ -3,5 +3,6 @@
     <string name="textview">TextView</string>
     <string name="movieTitle">Spider-Man: No Way Home</string>
     <string name="movieOverview">Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. When he asks for help from Doctor Strange the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man.</string>
-
+    <string name="moviePopularity">Popularity: 6345.634</string>
+    <string name="popularity">Popularity: %1$.2f</string>
 </resources>
